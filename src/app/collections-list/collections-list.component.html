@@ -1,0 +1,35 @@
+<section class="section">
+  <div class="container">
+    <h2 class="title">
+      Insert a collection
+      <hr>
+    </h2>
+
+    <form #collectionForm="ngForm">
+      <div class="columns">
+        <div class="column is-half">
+          <div class="field">
+            <label class="label">Data</label>
+            <div class="control">
+              <textarea [(ngModel)]="collection.data" #collectionData="ngModel" [ngClass]="{'is-danger': (collectionData.errors && (collectionData.dirty || collectionData.touched)) || errorMessage != undefined }" rows="10" (blur)="pretty()" name="collection-data" class="textarea" placeholder="[{...}, {...}, {...}]" required></textarea>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Description</label>
+            <div class="control">
+              <div class="columns">
+                <div class="column is-three-quarters">
+                  <input [(ngModel)]="collection.description" #description="ngModel" [ngClass]="{'is-danger': description.errors && (description.dirty || description.touched) }" name="collection-description" class="input" type="text" placeholder="To-do tasks" required>
+                </div>
+                <div class="column is-one-quarter">
+                  <button class="button is-link add-button" [disabled]="!collectionForm.form.valid">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

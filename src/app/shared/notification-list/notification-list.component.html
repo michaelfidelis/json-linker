@@ -1,0 +1,6 @@
+<section class="container notifications-area">
+      <div *ngFor="let notification of notifications|async" class="notification" [ngClass]="notification.type">
+        <button class="delete" (click)="close(notification)"></button>
+        {{notification.text}}
+      </div>
+</section>

@@ -1,0 +1,25 @@
+.notifications-area {
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.notification {
+    margin: 0;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.notification > .delete {
+    max-height: 2.5rem; 
+    max-width: 2.5rem;
+    height: 2.5rem; 
+    width: 2.5rem;
+
+    position: absolute;
+    right: 0.5rem;
+    top: 0.8rem;
+}
